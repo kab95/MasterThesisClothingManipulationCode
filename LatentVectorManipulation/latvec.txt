@@ -1,1 +1,0 @@
-assorted scripts related to vector manipulation and image processing
