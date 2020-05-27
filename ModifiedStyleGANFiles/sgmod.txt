@@ -1,0 +1,1 @@
+These files have been modified from the original StyleGAN. Replacing them should restor custom functionality
