@@ -41,8 +41,7 @@ def read_file(file_name):
     #resized = tf.image.resize(dims_expander, [INPUT_HEIGHT, INPUT_WIDTH])
     normalized = tf.divide(tf.subtract(resized, [INPUT_MEAN]), [INPUT_STD])
 
-    sess = tf.Session()
-    result = sess.run(normalized)
+
 
     return result[0]
 
@@ -61,6 +60,9 @@ def LoadDataset(path, imgLim = -1):
 
 processed_imgs_array, labels = LoadDataset("C:\\Users\\kaborg15\\PycharmProjects\\MasterThesisClothesFittingwGANs\\EvaluationDataset",2000)
 processed_val_array, labelsRed = LoadDataset("C:\\Users\\kaborg15\\PycharmProjects\\MasterThesisClothesFittingwGANs\\DiverseImagesSimplified")
+
+sess = tf.Session()
+result = sess.run(normalized)
 
 original_model = InceptionV3()
 bottleneck_input = original_model.get_layer(index=0).input
